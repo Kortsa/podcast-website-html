@@ -121,7 +121,7 @@ header {
   background: var(--xiketic-1);
 }
 
-header > .container {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,6 +155,29 @@ header > .container {
 }
 
 /* skipping the rest of navbar */
+
+.navbar-link:hover{
+  background: var(--nsu-purple);
+}
+
+.navbar .btn-primary{
+  display: none;
+}
+
+.nav-open-btn, .nav-close-btn{
+  background: var(--white);
+  color: var(--black);
+  font-size: 30px;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.nav-close-btn{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  
+}
 
 main {
   background: var(--xiketic-1);
@@ -259,7 +282,11 @@ main {
 .overview-content {
   padding: 0 25px 40px;
 }
-
+.overview-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
 .overview-text {
   margin-bottom: 40px;
   color: var(--light-periwinkle);
@@ -429,7 +456,7 @@ footer .container {
   --amaranth: hsl(349, 69%, 43%);
 }
 
-.go-top:active {
+.go-top.active {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
@@ -655,3 +682,30 @@ grid-template-columns: repeat(4,1fr);
 
 }
 
+/* screen larger than 1200px */
+@media(min-width:1200px){
+  :root{
+    --fs-1: 60px;
+  }
+  .container{
+    max-width: 1140px;
+  }
+
+  .hero{
+    padding-top: 120px;
+    padding-bottom: 150px;
+  }
+
+  .hero-banner{
+    top: 53%;
+    right: -50px ;
+  }
+
+  .blog{
+    padding-bottom: 150px;
+  }
+
+  footer .container{
+    padding: 100px 15px;
+  }
+}
